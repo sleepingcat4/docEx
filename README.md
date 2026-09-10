@@ -19,3 +19,19 @@ simple, you call the class, specify the images and run the code and it will do a
 
 `apt install -y libvips42 libvips-dev`
 
+### how to use it
+```Python
+from main import DigitalDocument
+
+document = DigitalDocument(
+  device="cuda:0"
+    )
+  images = [
+        "image.png",
+        "image1.png",
+    ]
+  document.extract_text_batch(
+        images,
+        output_file="ocr_results.jsonl",
+    )
+```
